@@ -1,9 +1,10 @@
 
   
 public class HeartController implements ControllerInterface {
-	HeartModelInterface model;
+	static HeartModelInterface model;
 	DJView view;
-  
+	
+	
 	public HeartController(HeartModelInterface model) {
 		this.model = model;
 		view = new DJView(this, new HeartAdapter(model));
@@ -11,13 +12,17 @@ public class HeartController implements ControllerInterface {
         view.createControls();
 		view.disableStopMenuItem();
 		view.disableStartMenuItem();
+		
 	}
   
 	public void start() {}
  
 	public void stop() {}
-    
-	public void increaseBPM() {}
+	
+    //metodo modificado
+	public void increaseBPM() {
+		model.getInstance();		
+	}
     
 	public void decreaseBPM() {}
   
