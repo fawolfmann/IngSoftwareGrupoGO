@@ -16,7 +16,7 @@ public class HeartModel implements HeartModelInterface, Runnable {
 		thread.start();
 	}
 	//Aggregate
-	public static HeartModel getInstance(){
+	public HeartModel getInstance(){
 		if (uniqueInstance==null){
 			uniqueInstance= new HeartModel();
 		}
