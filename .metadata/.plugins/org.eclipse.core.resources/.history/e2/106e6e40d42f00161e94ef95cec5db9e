@@ -23,7 +23,7 @@ public class HeartModel implements HeartModelInterface, Runnable {
 		CantInstance++;
 		return uniqueInstance;
 	}
-	public static int getCantInstance(){
+	public int getCantInstance(){
 		return CantInstance;
 	}
 	//fin aggregate

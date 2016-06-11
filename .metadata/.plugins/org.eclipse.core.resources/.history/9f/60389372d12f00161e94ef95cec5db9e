@@ -7,7 +7,7 @@ public class HeartModel implements HeartModelInterface, Runnable {
     int bpm = 90;
 	Random random = new Random(System.currentTimeMillis());
 	Thread thread;
-	private static HeartModel uniqueInstance=null;	
+	private static Hea	rtModel uniqueInstance=null;	
 	static int CantInstance= 0;
 
 	//cambiar a private cuando solucione el interfaz
@@ -23,7 +23,7 @@ public class HeartModel implements HeartModelInterface, Runnable {
 		CantInstance++;
 		return uniqueInstance;
 	}
-	public static int getCantInstance(){
+	public int getCantInstance(){
 		return CantInstance;
 	}
 	//fin aggregate

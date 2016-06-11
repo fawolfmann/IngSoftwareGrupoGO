@@ -1,14 +1,13 @@
 
   
 public class HeartController implements ControllerInterface {
-	static HeartModelInterface model;
+	static HeartModel model;
 	DJView view;
 	
 	
-	public HeartController(HeartModelInterface model) {
+	public HeartController(HeartModel model) {
 		this.model = model;
-		//modificado en ves de new DJView pongo HeartView
-		view = new HeartView(this, new HeartAdapter(model));
+		view = new DJView(this, new HeartAdapter(model));
         view.createView();
         view.createControls();
 		view.disableStopMenuItem();
